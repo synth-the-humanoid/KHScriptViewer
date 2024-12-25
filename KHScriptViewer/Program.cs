@@ -109,7 +109,7 @@ do
                 }
                 break;
             case "events":
-                Console.WriteLine("Examine: 0x{0:X}\t|\t{0:D}\nHit: 0x{1:X}\t|\t{1:D}\nTalk: {2:X}\t|\t{2:D}\nTouch: {3:X}\t|\t{3:D}\nLockOn: {4:X}\t|\t{4:D}\nNearby: {5:X}\t|\t{5:D}", selectedScript.GetEventInstruction(ScriptEvent.Examine), selectedScript.GetEventInstruction(ScriptEvent.Hit), selectedScript.GetEventInstruction(ScriptEvent.Talk), selectedScript.GetEventInstruction(ScriptEvent.Touch), selectedScript.GetEventInstruction(ScriptEvent.LockOn), selectedScript.GetEventInstruction(ScriptEvent.Nearby));
+                Console.WriteLine("Examine: 0x{0:X}\t|\t{0:D}\nHit: 0x{1:X}\t|\t{1:D}\nTalk: 0x{2:X}\t|\t{2:D}\nTouch: 0x{3:X}\t|\t{3:D}\nLockOn: 0x{4:X}\t|\t{4:D}\nNearby: 0x{5:X}\t|\t{5:D}", selectedScript.GetEventInstruction(ScriptEvent.Examine), selectedScript.GetEventInstruction(ScriptEvent.Hit), selectedScript.GetEventInstruction(ScriptEvent.Talk), selectedScript.GetEventInstruction(ScriptEvent.Touch), selectedScript.GetEventInstruction(ScriptEvent.LockOn), selectedScript.GetEventInstruction(ScriptEvent.Nearby));
                 break;
             default:
                 if (userInput != "exit")
