@@ -25,7 +25,7 @@ do
         switch (fields[0])
         {
             case "help":
-                Console.WriteLine("Type a number to view information on that script. After selecting a script, type a command to use it.\nCommands:\nlist <instructionStart> <instructionEnd>\nset <instructionID> <functionID> <parameter>");
+                Console.WriteLine("Type a number to view information on that script. After selecting a script, type a command to use it.\nCommands:\nlist <instructionStart> <instructionEnd>\nset <instructionID> <functionID> <parameter>\nevents");
                 break;
             case "list":
                 instructionStart = 0;
@@ -107,6 +107,9 @@ do
                 {
                     Console.WriteLine("Format: set <instructionID> <functionID> <parameter>");
                 }
+                break;
+            case "events":
+                Console.WriteLine("Examine: 0x{0:X}\t|\t{0:D}\nHit: 0x{1:X}\t|\t{1:D}\nTalk: {2:X}\t|\t{2:D}\nTouch: {3:X}\t|\t{3:D}\nLockOn: {4:X}\t|\t{4:D}\nNearby: {5:X}\t|\t{5:D}", selectedScript.GetEventInstruction(ScriptEvent.Examine), selectedScript.GetEventInstruction(ScriptEvent.Hit), selectedScript.GetEventInstruction(ScriptEvent.Talk), selectedScript.GetEventInstruction(ScriptEvent.Touch), selectedScript.GetEventInstruction(ScriptEvent.LockOn), selectedScript.GetEventInstruction(ScriptEvent.Nearby));
                 break;
             default:
                 if (userInput != "exit")
